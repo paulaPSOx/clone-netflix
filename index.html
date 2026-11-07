@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="PaulaPSOxFlix: interface de streaming criada como projeto de portfólio, com foco em responsividade e interatividade."
+    >
+    <meta name="author" content="Paula Oliveira">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Pré-visualização ao compartilhar o link -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="PaulaPSOxFlix | Plataforma de Streaming">
+    <meta property="og:description" content="Interface de streaming criada como projeto de portfólio, com foco em responsividade e interatividade.">
+    <meta property="og:image" content="./midia/img/logo.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./midia/img/icone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Sem JavaScript, o FAQ continua legível -->
+    <noscript>
+        <style>
+            .faq-item { opacity: 1; transform: none; }
+            .faq-answer[hidden] { display: block !important; }
+            .faq-answer { max-height: none; padding: 17px 22px; }
+            .faq-question span { display: none; }
+        </style>
+    </noscript>
+
+    <title>PaulaPSOxFlix | Plataforma de Streaming</title>
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- Cabeçalho e banner principal -->
+    <header id="container">
+        <div id="cabecalho">
+            <a href="./index.html" aria-label="PaulaPSOxFlix - página inicial">
+                <img src="./midia/img/logo.png" class="logo" alt="Logo PaulaPlay">
+            </a>
+
+            <a href="./catalogo.html" class="btn-entrar">Acessar catálogo</a>
+        </div>
+
+        <div class="hero">
+            <p class="hero-etiqueta">UMA EXPERIÊNCIA DE STREAMING</p>
+            <h1>Explore conteúdos de forma simples e intuitiva.</h1>
+            <p class="sub">Projeto focado em experiência do usuário e design responsivo.</p>
+            <p class="desc">Descubra filmes, séries e animes em um só lugar.</p>
+
+            <a href="./catalogo.html" class="btn-entrar hero-cta">
+                Explorar catálogo <span aria-hidden="true">→</span>
+            </a>
+        </div>
+
+        <div class="hero-indicador" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="conteudo-principal">
+        <!-- Apresentação das características do projeto -->
+        <section class="secao">
+            <div class="texto">
+                <span class="secao-numero">01 / EXPERIÊNCIA</span>
+                <h2>Interface moderna</h2>
+                <p>Design inspirado em plataformas de streaming, com foco em usabilidade e acessibilidade.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="texto">
+                <span class="secao-numero">02 / ADAPTAÇÃO</span>
+                <h2>Responsividade</h2>
+                <p>Experiência adaptada para celular, tablet e desktop.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="texto">
+                <span class="secao-numero">03 / INTERAÇÃO</span>
+                <h2>Interatividade</h2>
+                <p>Componentes dinâmicos utilizando JavaScript puro.</p>
+            </div>
+        </section>
+
+        <section class="secao">
+            <div class="texto">
+                <span class="secao-numero">04 / PORTFÓLIO</span>
+                <h2>Projeto independente</h2>
+                <p>Desenvolvido para demonstrar habilidades em desenvolvimento front-end e construção de interfaces.</p>
+            </div>
+        </section>
+
+        <section class="aviso">
+            <p>
+                Este é um projeto de portfólio desenvolvido para fins educacionais.
+                Não possui vínculo com plataformas reais de streaming.
+            </p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="faq-cabecalho">
+                <span class="secao-numero">DÚVIDAS</span>
+                <h2>Perguntas frequentes</h2>
+            </div>
+
+            <div class="faq-item">
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-1"
+                >
+                    O que é este projeto?
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div id="faq-resposta-1" class="faq-answer" hidden>
+                    <p>Este é um projeto de portfólio desenvolvido para demonstrar habilidades em desenvolvimento front-end.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-2"
+                >
+                    Este site é oficial?
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div id="faq-resposta-2" class="faq-answer" hidden>
+                    <p>Não. Este projeto é independente e não possui vínculo com nenhuma empresa ou serviço de streaming real.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button
+                    class="faq-question"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-resposta-3"
+                >
+                    Posso assistir conteúdos aqui?
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div id="faq-resposta-3" class="faq-answer" hidden>
+                    <p>O projeto demonstra uma interface de streaming. A reprodução disponível depende dos vídeos de demonstração incluídos localmente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <p>Pronto para explorar?</p>
+            <a href="./catalogo.html" class="btn-entrar">Ver catálogo <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+
+    <!-- Rodapé da página inicial -->
+    <footer class="rodape-home">
+        <div class="rodape-home-conteudo">
+            <div>
+                <img src="./midia/img/logo.png" alt="PaulaPlay" class="rodape-home-logo">
+                <p>Projeto de portfólio desenvolvido por Paula Oliveira.</p>
+            </div>
+
+            <nav aria-label="Links do rodapé">
+                <a href="./index.html">Início</a>
+                <a href="./catalogo.html">Catálogo</a>
+                <a href="https://github.com/paulaPSOx" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/oliveiraspaula/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </nav>
+        </div>
+
+        <div class="rodape-home-base">
+            <p>© <span id="ano-atual">2026</span> Paula Oliveira · Projeto independente para fins educacionais.</p>
+            <a href="#container">Voltar ao topo ↑</a>
+        </div>
+    </footer>
+
+    <script src="./js/script.js" defer></script>
+</body>
+</html>

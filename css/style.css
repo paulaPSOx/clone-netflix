@@ -1,0 +1,443 @@
+/* =====================================================
+   PAULAPSOXPLAYFLIX — PÁGINA INICIAL
+===================================================== */
+
+:root {
+    --primary: #e50914;
+    --primary-hover: #b20710;
+    --bg-main: #000000;
+    --bg-secondary: #111111;
+    --bg-card: #303030;
+    --text-main: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --border: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de rolagem global — identidade visual Flix */
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #171717;
+}
+
+body,
+.modal-conteudo {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #171717;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid #111111;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #e50914, #9f0710);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff2631;
+}
+
+::-webkit-scrollbar-corner {
+    background: #111111;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: "Montserrat", sans-serif;
+    animation: fade-page 0.6s ease-in;
+}
+
+a,
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Link de acessibilidade: pular para o conteúdo */
+.pular-conteudo {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 100;
+    padding: 10px 14px;
+    transform: translateY(-160%);
+    border-radius: 4px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+}
+
+.pular-conteudo:focus {
+    transform: translateY(0);
+}
+
+/* Cabeçalho e background */
+#container {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    overflow: hidden;
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.96), rgba(0, 0, 0, 0.35)),
+        url("../midia/background.jpeg") center center / cover no-repeat;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: clamp(18px, 4vw, 50px);
+}
+
+.logo {
+    display: block;
+    width: clamp(120px, 15vw, 160px);
+    height: auto;
+    object-fit: contain;
+}
+
+/* Botões */
+.btn-entrar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 22px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.btn-entrar:hover {
+    transform: translateY(-2px);
+    background: var(--primary-hover);
+}
+
+/* Hero */
+.hero {
+    max-width: 900px;
+    margin: clamp(70px, 10vw, 125px) auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero-etiqueta,
+.secao-numero {
+    display: block;
+    margin-bottom: 13px;
+    color: #b7b7b7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 66px);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+}
+
+.sub {
+    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: clamp(16px, 2.5vw, 25px);
+    line-height: 1.5;
+}
+
+.desc {
+    margin-top: 18px;
+    color: var(--text-muted);
+    font-size: clamp(13px, 1.8vw, 17px);
+}
+
+.hero-cta {
+    margin-top: 28px;
+}
+
+.hero-indicador {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    display: flex;
+    gap: 6px;
+    transform: translateX(-50%);
+}
+
+.hero-indicador span {
+    width: 23px;
+    height: 3px;
+    border-radius: 4px;
+}
+
+.hero-indicador span:first-child {
+    background: var(--primary);
+}
+
+/* Seções */
+.secao {
+    padding: clamp(55px, 8vw, 88px) 20px;
+    border-top: 7px solid var(--border);
+    text-align: center;
+}
+
+.texto {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.secao h2 {
+    margin-bottom: 17px;
+    font-size: clamp(26px, 4.5vw, 43px);
+    letter-spacing: -0.035em;
+}
+
+.secao p {
+    color: var(--text-secondary);
+    font-size: clamp(14px, 1.8vw, 19px);
+    line-height: 1.7;
+}
+
+.aviso {
+    padding: 24px 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* FAQ */
+#faq {
+    padding: 65px 20px;
+}
+
+.faq-cabecalho {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: clamp(28px, 5vw, 46px);
+    letter-spacing: -0.04em;
+}
+
+.faq-item {
+    max-width: 820px;
+    margin: 10px auto;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.faq-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 19px 22px;
+    border: 0;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-size: clamp(15px, 2.2vw, 19px);
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+    background: #414141;
+}
+
+.faq-question span {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 300;
+    transition: transform 0.25s ease;
+}
+
+.faq-question[aria-expanded="true"] span {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 22px;
+    background: #252525;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.faq-answer.ativo {
+    padding: 17px 22px;
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Chamada final */
+.cta-final {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    padding: 60px 20px 75px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.cta-final p {
+    font-size: clamp(19px, 3vw, 25px);
+    font-weight: 600;
+}
+
+/* Rodapé da página inicial */
+.rodape-home {
+    padding: 38px clamp(20px, 5vw, 70px) 18px;
+    border-top: 1px solid #252525;
+    background:
+        radial-gradient(ellipse at 12% 0%, rgba(229, 9, 20, 0.08), transparent 38%),
+        #101010;
+}
+
+.rodape-home-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.rodape-home-logo {
+    display: block;
+    width: 125px;
+    max-height: 40px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.rodape-home-conteudo p {
+    max-width: 350px;
+    margin-top: 12px;
+    color: #858585;
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.rodape-home-conteudo nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.rodape-home-conteudo nav a,
+.rodape-home-base a {
+    color: #999999;
+    font-size: 11px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.rodape-home-conteudo nav a:hover,
+.rodape-home-base a:hover {
+    color: #ffffff;
+}
+
+.rodape-home-base {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 16px;
+    border-top: 1px solid #292929;
+}
+
+.rodape-home-base p {
+    color: #696969;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* Animação e responsividade */
+@keyframes fade-page {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        margin-top: 70px;
+    }
+
+    .rodape-home-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .rodape-home-conteudo nav {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .rodape-home-base {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

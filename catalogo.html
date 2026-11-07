@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore filmes, séries e animes no PaulaPSOxFlix, projeto independente de portfólio.">
+    <meta name="author" content="Paula Oliveira">
+    <meta name="theme-color" content="#080808">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Pré-visualização ao compartilhar o link -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="PaulaPSOxFlix | Catálogo">
+    <meta property="og:description" content="Explore filmes, séries e animes no PaulaPSOxFlix, projeto independente de portfólio.">
+    <meta property="og:image" content="./midia/img/logo.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./midia/img/icone.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/catalogo.css">
+
+    <title>PaulaPSOxFlix | Catálogo</title>
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <!-- Áudio mantido no projeto. A reprodução só acontece após uma ação do usuário. -->
+    <audio src="./midia/audio/tudum-netflix-sound.mp3" class="audio" preload="none"></audio>
+
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <div class="topo-conteudo">
+            <a class="marca" href="./index.html" aria-label="PaulaPSOxFlix - página inicial">
+                <img src="./midia/img/logo.png" class="logo-catalogo" alt="Logo Flix">
+            </a>
+
+            <nav class="navegacao-principal" aria-label="Navegação principal">
+                <a href="./index.html">Início</a>
+                <a href="#catalogo">Explorar</a>
+                <a href="#series">Séries</a>
+                <a href="#animes">Animes</a>
+            </nav>
+
+            <div class="topo-direita avatar-container">
+                <button
+                    class="avatar-trigger"
+                    type="button"
+                    aria-label="Abrir opções de avatar"
+                    aria-expanded="false"
+                    aria-controls="avatar-dropdown"
+                >
+                    <img src="./midia/img/avatar/avatar.png" class="avatar" alt="Avatar do perfil">
+                </button>
+
+                <div class="avatar-dropdown" id="avatar-dropdown" aria-label="Escolher avatar" hidden>
+                    <p class="avatar-titulo">Escolha seu perfil</p>
+
+                    <div class="avatar-lista">
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 1"><img src="./midia/img/avatar/avatar1.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 2"><img src="./midia/img/avatar/avatar2.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 3"><img src="./midia/img/avatar/avatar3.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 4"><img src="./midia/img/avatar/avatar4.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 5"><img src="./midia/img/avatar/avatar5.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 6"><img src="./midia/img/avatar/avatar6.png" alt=""></button>
+                    </div>
+
+                    <div class="avatar-lista">
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 7"><img src="./midia/img/avatar/avatar7.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 8"><img src="./midia/img/avatar/avatar8.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 9"><img src="./midia/img/avatar/avatar9.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 10"><img src="./midia/img/avatar/avatar10.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 11"><img src="./midia/img/avatar/avatar11.png" alt=""></button>
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar 12"><img src="./midia/img/avatar/avatar12.png" alt=""></button>
+                    </div>
+
+                    <div class="avatar-lista avatar-acoes">
+                        <button class="avatar-opcao" type="button" aria-label="Selecionar avatar padrão">
+                            <img src="./midia/img/avatar/avatar.png" alt="">
+                        </button>
+                        <button class="btn-sair" type="button">Sair do catálogo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <!-- Destaque principal com sequência de trailers -->
+        <section class="destaque" aria-label="Conteúdo em destaque">
+            <video
+                src="./midia/video/stranger-things.mp4"
+                class="video stranger-things"
+                playsinline
+                muted
+                preload="metadata"
+                aria-label="Trailer de Stranger Things"
+            ></video>
+
+            <video
+                src="./midia/video/squid-game.mp4"
+                class="video squid-game"
+                playsinline
+                muted
+                preload="metadata"
+                aria-label="Trailer de Squid Game"
+                hidden
+            ></video>
+
+            <div class="destaque-sombra"></div>
+
+            <div class="capa">
+                <p class="eyebrow"><span class="selo-play">P</span> PSOxFLIX ORIGINAL • EM DESTAQUE</p>
+                <h1 class="capa-titulo">Stranger Things</h1>
+                <p class="capa-descricao">
+                    Uma série de ficção científica e mistério. Em Hawkins, acontecimentos
+                    inexplicáveis mudam a vida de um grupo de amigos.
+                </p>
+
+                <div class="botoes">
+                    <button class="link-assistir" type="button">▶ <span>Assistir trailer</span></button>
+                    <button class="link-info" type="button">ⓘ <span>Mais informações</span></button>
+                    <button class="botao-som" type="button" aria-label="Ativar som" aria-pressed="false">🔇</button>
+                </div>
+            </div>
+
+            <div class="gradiente-baixo" aria-hidden="true"></div>
+
+            <!-- Indicadores dos trailers: o JavaScript controla a classe ativo. -->
+            <div class="destaque-indicador" aria-label="Trailer em reprodução">
+                <span class="indicador-destaque ativo" role="button" tabindex="0" aria-label="Ver trailer de Stranger Things" aria-current="true"></span>
+                <span class="indicador-destaque" role="button" tabindex="0" aria-label="Ver trailer de Squid Game" aria-current="false"></span>
+            </div>
+        </section>
+
+        <!-- Catálogo -->
+        <section class="carrossel-container" id="catalogo" aria-labelledby="titulo-carrossel">
+            <div class="secao-cabecalho">
+                <div>
+                    <p class="secao-legenda">DESCUBRA SEU PRÓXIMO FAVORITO</p>
+                    <h2 id="titulo-carrossel" class="titulo-carrossel">Filmes, séries e animes</h2>
+                </div>
+                <span class="secao-contador">CATÁLOGO PSOxFLIX</span>
+            </div>
+
+            <div class="linha-filmes-container" data-carousel>
+                <button class="scroll-btn left" type="button" aria-label="Mostrar títulos anteriores">‹</button>
+
+                <div class="linha-filmes" tabindex="0" aria-label="Carrossel de filmes, séries e animes">
+                    <button class="card-titulo" type="button" data-titulo="Stranger Things" data-genero="Ficção científica, drama" data-ano="2016" data-descricao="Em uma pequena cidade, o desaparecimento de um garoto revela experimentos secretos e uma dimensão assustadora.">
+                        <img src="./midia/img/cine/stranger-things.png" alt="Stranger Things" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Stranger Things</strong><small>Série • Ficção científica</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Squid Game" data-genero="Suspense, drama" data-ano="2021" data-descricao="Pessoas endividadas aceitam participar de jogos misteriosos com uma recompensa milionária e consequências extremas.">
+                        <img src="./midia/img/cine/squid-game.png" alt="Squid Game" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Squid Game</strong><small>Série • Suspense</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Suits" data-genero="Drama jurídico" data-ano="2011" data-descricao="Um talentoso jovem sem formação em Direito passa a trabalhar com um dos melhores advogados de Nova York.">
+                        <img src="./midia/img/cine/suits.png" alt="Suits" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Suits</strong><small>Série • Drama</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Senna" data-genero="Drama biográfico" data-ano="2024" data-descricao="Uma produção dramatizada que acompanha a trajetória, os desafios e o legado de Ayrton Senna.">
+                        <img src="./midia/img/cine/senna.png" alt="Senna" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Senna</strong><small>Série • Biografia</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="The Mentalist" data-genero="Crime, drama" data-ano="2008" data-descricao="Um consultor com habilidades extraordinárias de observação ajuda a polícia a solucionar crimes complexos.">
+                        <img src="./midia/img/cine/the-mentalist.png" alt="The Mentalist" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>The Mentalist</strong><small>Série • Investigação</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Nimona" data-genero="Animação, aventura" data-ano="2023" data-descricao="Um cavaleiro acusado injustamente encontra uma adolescente metamorfa que pode ser a chave para provar sua inocência.">
+                        <img src="./midia/img/cine/nimona.png" alt="Nimona" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Nimona</strong><small>Filme • Animação</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Naruto Shippuden" data-genero="Anime, aventura" data-ano="2007" data-descricao="Naruto retorna mais velho e determinado a proteger seus amigos e realizar seu sonho de se tornar Hokage.">
+                        <img src="./midia/img/cine/naruto-shippuden.png" alt="Naruto Shippuden" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Naruto Shippuden</strong><small>Anime • Aventura</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Arcane" data-genero="Animação, fantasia" data-ano="2021" data-descricao="Duas irmãs seguem caminhos opostos em meio ao conflito entre a cidade tecnológica de Piltover e a subterrânea Zaun.">
+                        <img src="./midia/img/cine/arcane.png" alt="Arcane" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Arcane</strong><small>Animação • Fantasia</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="The Apothecary Diaries" data-genero="Anime, mistério" data-ano="2023" data-descricao="Maomao, uma jovem com conhecimentos de medicina, começa a desvendar mistérios dentro do palácio imperial.">
+                        <img src="./midia/img/cine/the-apothecary-diaries.png" alt="The Apothecary Diaries" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>The Apothecary Diaries</strong><small>Anime • Mistério</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="The Chosen" data-genero="Drama histórico" data-ano="2017" data-descricao="Uma narrativa dramática que acompanha a vida de Jesus e das pessoas que cruzam seu caminho.">
+                        <img src="./midia/img/cine/the-chosen.png" alt="The Chosen" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>The Chosen</strong><small>Série • Drama histórico</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="Anne with an E" data-genero="Drama" data-ano="2017" data-descricao="Uma jovem órfã transforma a vida de uma comunidade com sua imaginação, sensibilidade e personalidade marcante.">
+                        <img src="./midia/img/cine/anne-with-e.png" alt="Anne with an E" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>Anne with an E</strong><small>Série • Drama</small></span>
+                    </button>
+
+                    <button class="card-titulo" type="button" data-titulo="The Good Doctor" data-genero="Drama médico" data-ano="2017" data-descricao="Um jovem cirurgião com habilidades extraordinárias enfrenta desafios profissionais e pessoais em um hospital.">
+                        <img src="./midia/img/cine/the-good-doctor.png" alt="The Good Doctor" width="285" height="160" loading="lazy">
+                        <span class="card-sobreposicao"><strong>The Good Doctor</strong><small>Série • Drama médico</small></span>
+                    </button>
+                </div>
+
+                <button class="scroll-btn right" type="button" aria-label="Mostrar próximos títulos">›</button>
+            </div>
+
+            <p class="dica-carrossel">Passe o mouse para pausar • Use as setas para navegar</p>
+        </section>
+
+        <!-- Categorias -->
+        <section class="categoria-resumo" id="series" aria-labelledby="titulo-series">
+            <div class="categoria-texto">
+                <span class="categoria-marcador"></span>
+                <div>
+                    <p class="secao-legenda">HISTÓRIAS PARA MARATONAR</p>
+                    <h2 id="titulo-series">Séries em destaque</h2>
+                </div>
+            </div>
+            <p>Drama, suspense, investigação e histórias que prendem do primeiro episódio.</p>
+            <a href="#catalogo">Explorar catálogo <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="categoria-resumo categoria-anime" id="animes" aria-labelledby="titulo-animes">
+            <div class="categoria-texto">
+                <span class="categoria-marcador"></span>
+                <div>
+                    <p class="secao-legenda">ANIMAÇÃO, AVENTURA E FANTASIA</p>
+                    <h2 id="titulo-animes">Animes e animações</h2>
+                </div>
+            </div>
+            <p>Universos incríveis, personagens marcantes e novas aventuras para descobrir.</p>
+            <a href="#catalogo">Explorar catálogo <span aria-hidden="true">→</span></a>
+        </section>
+    </main>
+
+    <!-- Modal de detalhes dos títulos -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-describedby="modal-descricao" aria-hidden="true" hidden>
+        <div class="modal-conteudo">
+            <button class="fechar-modal" type="button" aria-label="Fechar janela">✕</button>
+
+            <p class="eyebrow" id="modal-legenda">DETALHES DO TÍTULO</p>
+
+            <h2 id="modal-titulo">Stranger Things</h2>
+
+            <p id="modal-descricao">Série de ficção científica e mistério ambientada em Hawkins, Indiana.</p>
+
+            <div class="modal-metadados">
+                <p>Gênero <strong id="modal-genero">Ficção científica, drama</strong></p>
+                <p>Ano <strong id="modal-ano">2016</strong></p>
+            </div>
+
+            <!-- Opções de trailer: aparecem somente para Stranger Things e Squid Game. -->
+            <div class="modal-trailers" hidden>
+                <p class="modal-trailers-titulo" id="modal-trailers-titulo">Escolha o trailer que deseja assistir</p>
+
+                <div class="modal-trailers-opcoes">
+                    <button
+                        class="botao-trailer"
+                        type="button"
+                        data-trailer-index="0"
+                        aria-pressed="false"
+                    >
+                        <span class="trailer-icone">▶</span>
+                        <span>
+                            <strong>Stranger Things</strong>
+                            <small>Assistir trailer</small>
+                        </span>
+                    </button>
+
+                    <button
+                        class="botao-trailer"
+                        type="button"
+                        data-trailer-index="1"
+                        aria-pressed="false"
+                    >
+                        <span class="trailer-icone">▶</span>
+                        <span>
+                            <strong>Squid Game</strong>
+                            <small>Assistir trailer</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <div class="rodape-marca">
+                <a href="./index.html" aria-label="Voltar ao início">
+                    <img src="./midia/img/logo.png" alt="PaulaPSOxFlix" class="rodape-logo">
+                </a>
+                <p>Uma experiência de streaming criada para praticar e demonstrar desenvolvimento front-end.</p>
+            </div>
+
+            <div class="rodape-coluna">
+                <h2>Explore</h2>
+                <a href="./index.html">Página inicial</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#series">Séries</a>
+                <a href="#animes">Animes</a>
+            </div>
+
+            <div class="rodape-coluna">
+                <h2>Desenvolvedora</h2>
+                <a href="https://github.com/paulaPSOx" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://www.linkedin.com/in/oliveiraspaula/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+
+            <div class="rodape-coluna rodape-projeto">
+                <h2>Sobre o projeto</h2>
+                <p>Projeto independente e educacional. Não oferece transmissão de conteúdo nem possui vínculo com serviços oficiais de streaming.</p>
+            </div>
+        </div>
+
+        <div class="rodape-base">
+            <p>© <span id="ano-atual">2026</span> Paula Oliveira. Desenvolvido para portfólio.</p>
+            <a href="#conteudo-principal">Voltar ao topo ↑</a>
+        </div>
+    </footer>
+
+    <script src="./js/catalogo.js" defer></script>
+</body>
+</html>
